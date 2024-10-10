@@ -8,6 +8,13 @@ namespace EntityLib
 {
     public class Employee
     {
+        public Employee()
+        {
+            //NrothwindDAO.ProductsServiceDAO obj=new NrothwindDAO.ProductsServiceDAO();
+            //string cn=obj.Connect();
+            //Console.WriteLine(cn);
+        }
+
         internal static int id=0;
       internal static void GenerateEmployeeID()
         { 

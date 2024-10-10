@@ -1,0 +1,59 @@
+﻿Tuples:
+Data structure
+it is used to return multiple values.
+
+return mutliple values:
+1) use out parameters
+2) Using a class, property 
+3) Tuples
+
+
+Tuples allow to create, access and manipulate data Sets.
+Pass multiple values to a method through a single parameter.
+-------------------------------------------------------
+
+Connect to the db:
+1) Connected:
+your app server is 24/7 connected to the database server.
+Sql Connection: needs connection string.
+SqlCommand---> (Sql Statement)insert,update,delete, select
+Cn must be opened
+Command must be executed
+Executed command/statement output is to be collected,
+I,U,D----> ExecuteNonQuery
+S---------> ExecuteReader
+S (With aggregate function)-----> ExecuteScalar
+cn must be closed 
+
+
+
+
+
+
+2) Disconnected:
+your app server connects and disconnects from the database server on need server.
+==================================================================
+
+CREATE PROCEDURE [dbo].UpdateProduct
+	@prodid int = 0,
+	@productname nvarchar(40),
+	@unitprice money
+AS
+	update products
+	set ProductName=@productname,UnitPrice=@unitprice
+	where ProductID=@prodid;
+RETURN 0
+
+---------------------------------------------------------------------
+
+
+CREATE PROCEDURE [dbo].InsertProduct
+	@ProductName nvarchar(40),
+	@SupplierID int,
+	@CategoryID int,
+	@QuantityPerUnit nvarchar(20),
+	@UnitPrice money,
+	@UnitsInStock int
+AS
+Insert into Products (ProductName,SupplierID,CategoryID,QuantityPerUnit,UnitPrice,UnitsInStock)
+values (@ProductName,@SupplierID,@CategoryID,@QuantityPerUnit,@UnitPrice,@UnitsInStock)

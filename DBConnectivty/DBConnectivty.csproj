@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="EntityLib">
       <HintPath>..\EntityLib\bin\Debug\net6.0\EntityLib.dll</HintPath>
     </Reference>

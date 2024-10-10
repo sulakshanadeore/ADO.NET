@@ -6,4 +6,17 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ExceptionLibrary">
+      <HintPath>..\ExceptionLibrary\bin\Debug\net6.0\ExceptionLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="NrothwindDAO">
+      <HintPath>..\NrothwindDAO\bin\Debug\net6.0\NrothwindDAO.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
